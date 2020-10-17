@@ -31,10 +31,10 @@ class Painting2 extends React.Component {
         ctx.fillRect(this.x, this.y, this.size, this.size);
       }
       move() {
-        if(Math.random() * 1000 < 37) {
+        if(Math.random() * 1000 < 35) {
           this.randinc_x = (Math.random() * 4) - 2.0;
         }
-        if(Math.random() * 1000 < 37) {
+        if(Math.random() * 1000 < 35) {
           this.randinc_y = (Math.random() * 4) - 2.0;
         }
         this.x += this.randinc_x;

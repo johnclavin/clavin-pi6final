@@ -1,13 +1,47 @@
 import React from 'react';
-import './App.css';
+import { BrowserRouter as Router, Route,Switch } from 'react-router-dom';
+import "./App.css";
 
-function App() {
-  return (
-    <div className="App">
-      <h1>Hello Horseface!</h1>
-      <p>Keep Alive Indicator</p>
-    </div>
-  );
+import Navigation from "./Navigation";
+import Painting1 from "./Painting1";
+import Painting2 from "./Painting2";
+import Painting3 from "./Painting3";
+import Blink from "./Blink";
+
+class App extends React.Component{
+  constructor(props){
+      super(props);
+  }
+
+  render(){
+    return(
+      <div className="App">
+        <Router>
+          <Navigation />
+          <div className="Container">
+            <Switch>
+              <Route path="/Painting1" component={Painting1} />
+              <Route path="/Painting2" component={Painting2} />
+              <Route path="/Painting3" component={Painting3} />
+              <Route path="/Blink" component={Blink} />
+            </Switch>
+          </div>
+        </Router>
+      </div>
+    )
+  }
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 export default App;

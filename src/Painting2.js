@@ -99,7 +99,7 @@ class Painting2 extends React.Component {
         width = {600} height = {600} />
       </div>
       <div>
-        <button onClick={()=>{this.updateCanvas()}}>New Painting</button>
+        <button onClick={()=>{this.updateCanvas()}}>New Painting Variation</button>
       </div>
     </div>);
   }
